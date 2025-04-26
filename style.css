@@ -7,7 +7,10 @@ html, body {
   color: #111;
   min-height: 100vh;
   letter-spacing: 0.5px;
+  display: flex;
+  flex-direction: column;
 }
+
 header, footer {
   text-align: center;
   padding: 2rem 1rem 1rem 1rem;
@@ -30,6 +33,7 @@ header, footer {
   letter-spacing: 1px;
   opacity: 0.87;
   transition: opacity 0.18s;
+  background-color: #fff;
 }
 .top-nav a:hover {
   opacity: 1;
@@ -50,9 +54,81 @@ main {
   margin: 0 auto;
   padding: 2rem 1rem;
 }
-section {
+section, .hero, .about, .works, .contact {
+  margin-left: 0 !important;
   margin-bottom: 3rem;
 }
+
+.hero {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 40px;
+  margin: 0 auto;
+  padding: 0;
+  width: fit-content;
+  height: 500px;
+  min-height: unset;
+  background: none;
+  overflow: hidden;
+}
+
+.hero-left {
+  margin: 0;
+  padding: 0;
+  align-self: flex-start;
+  width: auto;
+  max-width: 480px;
+  flex: 0 1 auto;
+  height: 500px;
+  max-height: 500px;
+  overflow: visible;
+}
+
+.contact-btn {
+  margin-top: 1.2em;
+}
+
+.hero-image {
+  display: block;
+  height: 440px;
+  width: 440px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0;
+  padding: 0;
+  align-self: flex-start;
+}
+
+
+
+.circular-logo {
+  margin-left: 20px;
+}
+
+.contact-btn {
+  display: block;
+  width: 300px;
+  margin: 2em auto 0 auto;
+  padding: 0.7em 0;
+  background: #fff;
+  color: #111;
+  border: 2px solid #111;
+  border-radius: 2em;
+  font-family: 'Poiret One', Arial, sans-serif;
+  font-size: 1.1rem;
+  text-align: center;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+  cursor: pointer;
+}
+.contact-btn:hover {
+  background: #111;
+  color: #fff;
+  border-color: #111;
+}
+
 .gallery {
   display: flex;
   gap: 1rem;
@@ -70,6 +146,7 @@ section {
 footer {
   font-size: 0.95rem;
   color: #333;
+  margin-top: auto;
 }
 
 /* Hero section (flex, vertical center) */
@@ -91,6 +168,12 @@ footer {
 
 
 .hero-left {
+  width: auto;
+  height: auto;
+  display: inline-block;
+  min-width: 0;
+  min-height: 0;
+
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -148,6 +231,10 @@ footer {
 
 
 .hero-info {
+  height: auto;
+  min-height: 0;
+  display: inline-block;
+
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -203,7 +290,11 @@ footer {
 @media (max-width: 900px) {
   .vertical-text { font-size: 3.2rem; }
   .hero-image { max-width: 56vw; margin-right: 20px; }
-  .hero-info { padding: 0 12px; margin-left: 40px; max-width: 44vw; }
+  .hero-info {
+  height: auto;
+  min-height: 0;
+  display: inline-block;
+ padding: 0 12px; margin-left: 40px; max-width: 44vw; }
 }
 
 @media (max-width: 600px) {
@@ -223,9 +314,19 @@ footer {
     transform: rotate(-90deg);
   }
   .hero-left {
+  width: auto;
+  height: auto;
+  display: inline-block;
+  min-width: 0;
+  min-height: 0;
+
     margin-left: 0;
   }
   .hero-info {
+  height: auto;
+  min-height: 0;
+  display: inline-block;
+
     padding: 0 0 0 18px;
     margin-top: 12px;
     margin-bottom: 12px;

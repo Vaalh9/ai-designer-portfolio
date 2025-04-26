@@ -9,6 +9,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="vertical-sticky.css">
+    <link rel="stylesheet" href="cursor-trail.css">
+    <link rel="stylesheet" href="circular-logo.css">
+
 </head>
 <body>
 
@@ -17,10 +20,16 @@
       <div class="hero-left">
         <div class="hero-info">
           <h1>Valentin Dupont</h1>
-          <p>Designer specialized in Artificial Intelligence</p>
+          <p>Designing AI for Core Business Excellence</p>
         </div>
+        <section class="about reveal" id="about">
+            <h2>Overview</h2>
+            <p>Passionate about design and AI, I create unique experiences at the intersection of technology and aesthetics.</p>
+            <a href="mailto:valentin.dupont@mc2i.fr" class="contact-btn">Contact</a>
+        </section>
       </div>
       <img class="hero-image" src="assets/VDU_pic.png" alt="Profile" />
+     
     </section>
     <!-- Menu navigation haut droite -->
     <nav class="top-nav">
@@ -28,28 +37,28 @@
       <a href="#works">Projects</a>
       <a href="#contact">Contact</a>
     </nav>
+    <div class="logo-bg"></div>
+    <div class="circular-logo">
+      <svg id="circular-text" width="120" height="120" viewBox="0 0 120 120">
+        <defs>
+          <path id="circlePath" d="M60,60 m-48,0 a48,48 0 1,1 96,0 a48,48 0 1,1 -96,0" />
+        </defs>
+        <text font-size="13" font-family="Poiret One, Arial, sans-serif" fill="#111">
+          <textPath xlink:href="#circlePath">Designing for AI • Designing for AI •</textPath>
+        </text>
+      </svg>
+    </div>
     <main>
-        <section class="about reveal" id="about">
-            <h2>Overview</h2>
-            <p>Passionate about design and AI, I create unique experiences at the intersection of technology and aesthetics.</p>
-        </section>
-        <section class="works reveal" id="works">
-            <h2>Projects</h2>
-            <div class="gallery">
-                <img src="assets/work1-bw.jpg" alt="Project 1" />
-                <img src="assets/work2-bw.jpg" alt="Project 2" />
-                <img src="assets/work3-bw.jpg" alt="Project 3" />
-            </div>
-        </section>
-        <section class="contact reveal" id="contact">
-            <h2>Contact</h2>
-            <p>Email: <a href="mailto:valentin.dupont@mc2i.fr">valentin.dupont@mc2i.fr</a></p>
-        </section>
+        <!-- Section Projects supprimée -->
+        <!-- Bouton de contact sous l'image -->
+
     </main>
     <footer>
         <p>&copy; 2025 Nom du Designer AI</p>
     </footer>
     <div class="vertical-sticky-bottom"><span>Hello, world.</span></div>
     <script src="main.js"></script>
+    <script src="cursor-trail.js"></script>
+    <script src="circular-logo.js"></script>
 </body>
 </html>

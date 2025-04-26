@@ -1,0 +1,27 @@
+/* Custom animated thin circle cursor */
+body {
+  cursor: none !important;
+}
+#custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 36px;
+  height: 36px;
+  pointer-events: none;
+  border: 2.5px solid #111 !important;
+  border-radius: 50%;
+  background: none !important;
+  z-index: 100000;
+  transition: transform 0.13s cubic-bezier(.22,1,.36,1), border-color 0.2s;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+#custom-cursor.cursor-hover {
+  transform: translate(-50%, -50%) scale(1.5);
+  border-color: #111 !important;
+}
+
+@media (max-width: 600px) {
+  #custom-cursor { display: none; }
+}

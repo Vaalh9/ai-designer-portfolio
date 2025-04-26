@@ -1,0 +1,70 @@
+body {
+  cursor: none !important;
+}
+
+/* Suppression radicale de toute ombre ou filtre sur le curseur */
+.cursor-dot, .cursor-trail,
+.cursor-dot:before, .cursor-dot:after,
+.cursor-trail:before, .cursor-trail:after {
+  box-shadow: none !important;
+  filter: none !important;
+  background: none !important;
+}
+
+.cursor-dot, .cursor-trail {
+  position: fixed;
+  pointer-events: none;
+  border-radius: 50%;
+  z-index: 100000;
+  mix-blend-mode: normal;
+  box-shadow: none !important;
+}
+
+/* Suppression radicale de toute ombre ou filtre sur le curseur */
+.cursor-dot, .cursor-trail,
+.cursor-dot:before, .cursor-dot:after,
+.cursor-trail:before, .cursor-trail:after {
+  box-shadow: none !important;
+  filter: none !important;
+  background: none !important;
+}
+
+
+.cursor-dot {
+  width: 24px;
+  height: 24px;
+  border: 2.5px solid #111;
+  background: none;
+  left: 0; top: 0;
+  transform: translate(-50%, -50%);
+  transition: border-color 0.2s;
+}
+
+/* Suppression radicale de toute ombre ou filtre sur le curseur */
+.cursor-dot, .cursor-trail,
+.cursor-dot:before, .cursor-dot:after,
+.cursor-trail:before, .cursor-trail:after {
+  box-shadow: none !important;
+  filter: none !important;
+  background: none !important;
+}
+
+.cursor-trail {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #111;
+  opacity: 0.15;
+  left: 0; top: 0;
+  transform: translate(-50%, -50%);
+  transition: border-color 0.2s;
+}
+
+/* Suppression radicale de toute ombre ou filtre sur le curseur */
+.cursor-dot, .cursor-trail,
+.cursor-dot:before, .cursor-dot:after,
+.cursor-trail:before, .cursor-trail:after {
+  box-shadow: none !important;
+  filter: none !important;
+  background: none !important;
+}
+

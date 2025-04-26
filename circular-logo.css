@@ -1,0 +1,38 @@
+.logo-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 130px;
+  height: 130px;
+  background: #fff;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.circular-logo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  pointer-events: none;
+  z-index: 1100;
+}
+
+#circular-text {
+  animation: rotate-circle 6s linear infinite;
+  transform-origin: 50% 50%;
+}
+
+@keyframes rotate-circle {
+  100% { transform: rotate(360deg); }
+}
+
+  100% { transform: rotate(360deg); }
+}
+
+  100% { transform: rotate(360deg); }
+}

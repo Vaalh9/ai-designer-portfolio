@@ -14,17 +14,32 @@ document.addEventListener('DOMContentLoaded', function() {
   revealOnScroll();
 });
 
-// Animation curseur personnalisé
-const cursor = document.getElementById('cursor-effect');
+// Custom trailing blobs cursor
+const NUM_BLOBS = 3;
+const blobs = [];
+for (let i = 0; i < NUM_BLOBS; i++) {
+  const blob = document.createElement('div');
+  blob.className = 'cursor-blob' + (i > 0 ? ` blob${i+1}` : '');
+  document.body.appendChild(blob);
+  blobs.push({el: blob, x: window.innerWidth/2, y: window.innerHeight/2});
+}
+let mouseX = window.innerWidth/2, mouseY = window.innerHeight/2;
 document.addEventListener('mousemove', (e) => {
-  cursor.style.left = e.clientX + 'px';
-  cursor.style.top = e.clientY + 'px';
+  mouseX = e.clientX;
+  mouseY = e.clientY;
 });
-document.addEventListener('mousedown', () => {
-  cursor.style.background = 'rgba(0,0,0,0.13)';
-  cursor.style.border = '2.5px solid #000';
-});
-document.addEventListener('mouseup', () => {
-  cursor.style.background = 'rgba(0,0,0,0.04)';
-  cursor.style.border = '2px solid #111';
-});
+function animateBlobs() {
+  let prevX = mouseX, prevY = mouseY;
+  blobs.forEach((blob, i) => {
+    // Plus le blob est "loin" dans la liste, plus il suit lentement
+    blob.x += (prevX - blob.x) * (0.18 - i*0.045);
+    blob.y += (prevY - blob.y) * (0.18 - i*0.045);
+    blob.el.style.left = blob.x + 'px';
+    blob.el.style.top = blob.y + 'px';
+    prevX = blob.x;
+    prevY = blob.y;
+  });
+  requestAnimationFrame(animateBlobs);
+}
+animateBlobs();
+
