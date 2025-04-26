@@ -4,35 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Designer AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="vertical-sticky.css">
 </head>
 <body>
-    <div id="cursor-effect"></div>
-    <header>
-        <h1>Nom du Designer AI</h1>
-        <p>Designer spécialisé en intelligence artificielle</p>
-    </header>
+
+    <!-- Hero section: vertical text left + image right (flex) -->
+    <section class="hero">
+      <div class="hero-left">
+        <div class="hero-info">
+          <h1>Valentin Dupont</h1>
+          <p>Designer specialized in Artificial Intelligence</p>
+        </div>
+      </div>
+      <img class="hero-image" src="assets/VDU_pic.png" alt="Profile" />
+    </section>
+    <!-- Menu navigation haut droite -->
+    <nav class="top-nav">
+      <a href="#about">Overview</a>
+      <a href="#works">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
     <main>
-        <section class="about reveal">
-            <h2>À propos</h2>
-            <p>Passionné par le design et l’IA, je crée des expériences uniques à l’intersection de la technologie et de l’esthétique.</p>
+        <section class="about reveal" id="about">
+            <h2>Overview</h2>
+            <p>Passionate about design and AI, I create unique experiences at the intersection of technology and aesthetics.</p>
         </section>
-        <section class="works reveal">
-            <h2>Réalisations</h2>
+        <section class="works reveal" id="works">
+            <h2>Projects</h2>
             <div class="gallery">
-                <img src="assets/work1-bw.jpg" alt="Projet 1" />
-                <img src="assets/work2-bw.jpg" alt="Projet 2" />
-                <img src="assets/work3-bw.jpg" alt="Projet 3" />
+                <img src="assets/work1-bw.jpg" alt="Project 1" />
+                <img src="assets/work2-bw.jpg" alt="Project 2" />
+                <img src="assets/work3-bw.jpg" alt="Project 3" />
             </div>
         </section>
-        <section class="contact reveal">
+        <section class="contact reveal" id="contact">
             <h2>Contact</h2>
-            <p>Email : <a href="mailto:designer@exemple.com">designer@exemple.com</a></p>
+            <p>Email: <a href="mailto:valentin.dupont@mc2i.fr">valentin.dupont@mc2i.fr</a></p>
         </section>
     </main>
     <footer>
         <p>&copy; 2025 Nom du Designer AI</p>
     </footer>
+    <div class="vertical-sticky-bottom"><span>Hello, world.</span></div>
     <script src="main.js"></script>
 </body>
 </html>
